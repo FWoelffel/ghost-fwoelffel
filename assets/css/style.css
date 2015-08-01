@@ -81,3 +81,13 @@ body {
 #main-navbar .navbar-toggle:hover {
     background-color: transparent !important;
 }
+
+/**
+ * Helper class
+ */
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
