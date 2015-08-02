@@ -1,8 +1,8 @@
 {{!< default}}
-{{> header animate=false}}
+{{#post}}
+{{> header cover=image}}
 {{> navbar}}
 {{! Here goes the content}}
-{{#post}}
 <div id="main-content" class="post">
     <div class="container">
         <div class="row">
@@ -33,5 +33,5 @@
     </div>
     {{> pagination}}
 </div>
-{{/post}}
 {{> footer}}
+{{/post}}
