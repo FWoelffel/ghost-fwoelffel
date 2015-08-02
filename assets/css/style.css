@@ -118,5 +118,12 @@ body {
 }
 
 /**
- * Footer
+ * Post
  */
+#main-content.post header {
+    margin-bottom: 20px;
+}
+
+#main-content.post img {
+    max-width: 100%;
+}
