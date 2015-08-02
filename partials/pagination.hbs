@@ -1,13 +1,32 @@
-<div class="container">
-    <div class="row text-center">
-        <nav class="pagination" role="navigation">
-            {{#if prev}}
-                <a class="newer-posts" href="{{page_url prev}}"><i class="fa fa-arrow-left"></i></a>
-            {{/if}}
-            <span class="page-number">Page {{page}} sur {{pages}}</span>
-            {{#if next}}
-                <a class="older-posts" href="{{page_url next}}"><i class="fa fa-arrow-right"></i></a>
-            {{/if}}
-        </nav>
-    </div>
-</div>
+{{#is "post"}}
+    <nav class="container" id="pagination">
+        <div class="row">
+            <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2" role="navigation">
+                {{#next_post}}
+                <div class="col-xs-12 text-left">
+                    <a href="{{url}}"><i class="fa fa-arrow-circle-o-left"></i> {{title}}</a>
+                </div>
+                {{/next_post}}
+                {{#prev_post}}
+                <div class="col-xs-12 text-right">
+                    <a href="{{url}}">{{title}} <i class="fa fa-arrow-circle-o-right"></i></a>
+                </div>
+                {{/prev_post}}
+            </div>
+        </div>
+    </nav>
+{{else}} {{! We assume we are on the index }}
+    <nav class="container" id="pagination">
+        <div class="row">
+            <nav class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center" role="navigation">
+                {{#if prev}}
+                        <a class="newer-posts" href="{{page_url prev}}"><i class="fa fa-arrow-circle-o-left"></i></a>
+                {{/if}}
+                    <span class="page-number">{{page}} / {{pages}}</span>
+                {{#if next}}
+                        <a class="older-posts" href="{{page_url next}}"><i class="fa fa-arrow-circle-o-right"></i></a>
+                {{/if}}
+            </nav>
+        </div>
+    </nav>
+{{/is}}

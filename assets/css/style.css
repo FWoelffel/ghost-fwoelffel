@@ -112,7 +112,7 @@ body {
 /**
  * Pagination
  */
-.pagination {
+#pagination {
     margin-top: 20px;
     margin-bottom: 20px;
 }
