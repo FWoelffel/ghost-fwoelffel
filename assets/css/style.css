@@ -109,3 +109,10 @@ body {
     text-decoration: none;
 }
 
+/**
+ * Pagination
+ */
+.pagination {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
