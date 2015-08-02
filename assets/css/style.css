@@ -93,3 +93,19 @@ body {
     -ms-transform: translateY(-50%) translateX(-50%);
     -webkit-transform: translateY(-50%) translateX(-50%);
 }
+
+/**
+ * Index
+ */
+#main-content.index article header>h3 {
+    margin-bottom: 0;
+}
+
+#main-content.index article section.excerpt {
+    margin-top: 10px;
+}
+
+#main-content.index .title>a:hover {
+    text-decoration: none;
+}
+
