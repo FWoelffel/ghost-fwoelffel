@@ -69,6 +69,35 @@ body {
     border: 0;
     color: white;
 }
+
+#main-navbar.navbar-collapse-expanded {
+    background-color: rgba(0, 0, 0, 0.80);
+}
+
+#main-navbar.affix {
+    background-color: rgba(0, 0, 0, 0.80);
+}
+
+@media screen and (min-width: 768px) {
+    #main-navbar.affix-top #navbar-links {
+        background-color: rgba(0, 0, 0, 0.80);
+    }
+}
+
+#main-navbar .navbar-toggle {
+    padding: 14.5px 15px 14.5px 15px;
+    margin: 0;
+    border: 0;
+
+}
+
+#main-navbar .navbar-brand {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    height: 46px;
+    widht: 46px;
+}
+
 #main-navbar  img.logo {
     position: relative;
     height: inherit;
@@ -80,11 +109,7 @@ body {
 
 #main-navbar .navbar-collapse,
 #main-navbar .navbar-collapse-expanded {
-    background-color: rgba(0, 0, 0, 0.80);
     text-align: center;
-}
-#main-navbar .navbar-collapse-expanded .navbar-brand{
-    display: none;
 }
 
 #main-navbar .navbar-toggle:focus,
