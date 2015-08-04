@@ -16,18 +16,18 @@
                 <section class="col-xs-12 text-justify">
                     {{content}}
                 </section>
-                <footer class="col-xs-12 hidden-xs">
-                    <hr/>
-                    {{#if tags}}
-                    <ul class="list-inline">
-                        {{#foreach tags}}
-                            <li>
-                                <a href="{{url}}" title="{{name}}" class="tag-{{id}} label label-primary"><i class="fa fa-tag"></i>{{name}}</a>
-                            </li>
-                        {{/foreach}}
-                    </ul>
-                    {{/if}}
-                </footer>
+                {{#if tags}}
+                    <footer class="col-xs-12 hidden-xs">
+                        <hr/>
+                        <ul class="list-inline">
+                            {{#foreach tags}}
+                                <li>
+                                    <a href="{{url}}" title="{{name}}" class="tag-{{id}} label label-primary"><i class="fa fa-tag"></i>{{name}}</a>
+                                </li>
+                            {{/foreach}}
+                        </ul>
+                    </footer>
+                {{/if}}
             </article>
         </div>
     </div>
