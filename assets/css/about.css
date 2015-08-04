@@ -2,3 +2,156 @@ section {
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
+/* ---------------------------------------------------------
+ *	Vertical timeline
+ * --------------------------------------------------------- */
+
+.v-timeline {
+    padding: 0;
+    list-style: none;
+    position: relative;
+}
+/* The line */
+.v-timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #e0e0e0;
+    left: 20%;
+    margin-left: -6px;
+}
+/* The date/time */
+.v-timeline > li .v-time {
+    display: block;
+    width: 25%;
+    padding-right: 100px;
+    position: absolute;
+}
+.v-timeline > li .v-time span {
+    display: block;
+    text-align: right;
+    font-size: 16px;
+    color: #999;
+}
+/* heading */
+.v-timeline > li > .v-heading {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 75px;
+    position: relative;
+    padding: 11px 15px;
+}
+.v-timeline > li > .v-heading [class*="fa-"] {
+    margin-right: 6px;
+}
+/* Right content */
+.v-timeline > li .v-label {
+    margin: 0 0 15px 25%;
+    padding: 20px 30px;
+    font-weight: 300;
+    line-height: 1.4;
+    position: relative;
+    background: #f5f5f5;
+}
+.v-timeline > li .v-label p {
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.v-timeline > li .v-label h4 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.v-timeline > li .v-label h4 a {
+    text-decoration: none;
+}
+
+/* The triangle */
+.v-timeline > li .v-label:after {
+    right: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-right-color: #f5f5f5;
+    border-width: 10px;
+    top: 10px;
+}
+/* The icons */
+.v-timeline > li .v-icon {
+    width: 40px;
+    height: 26px;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    font-size: 13px;
+    line-height: 24px;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    color: #fff;
+    background: #666;
+    text-align: center;
+    left: 20%;
+    margin: 7px 0 0 -24px;
+    background-color: #869198;
+}
+.v-timeline > li .v-icon:before,
+.v-timeline > li .v-icon:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+}
+.v-timeline > li .v-icon:before {
+    bottom: 100%;
+    border-bottom: 10px solid #869198;
+}
+.v-timeline > li .v-icon:after {
+    top: 100%;
+    width: 0;
+    border-top: 10px solid #869198;
+}
+/* Example Media Queries */
+@media screen and (max-width: 65.375em) {
+    .v-timeline > li .v-time span {
+        font-size: 1.05em;
+    }
+}
+@media screen and (max-width: 47.2em) {
+    .v-timeline:before {
+        display: none;
+    }
+    .v-timeline > li .v-time {
+        width: 100%;
+        position: relative;
+        padding: 0 0 20px 10px;
+    }
+    .v-timeline > li .v-time span {
+        text-align: left;
+    }
+    .v-timeline > li .v-label {
+        margin: 0 0 30px 0;
+        padding: 1.3em;
+    }
+    .v-timeline > li .v-label:after {
+        right: auto;
+        left: 20px;
+        border-right-color: transparent;
+        border-bottom-color: #869198;
+        top: -20px;
+    }
+    .v-timeline > li .v-icon {
+        display: none;
+    }
+}
