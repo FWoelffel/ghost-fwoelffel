@@ -155,3 +155,30 @@ section {
         display: none;
     }
 }
+
+/*
+ * Skills
+ */
+#skills .lang-container {
+    display: inline-block;
+    margin: 0 15px 0 15px;
+    text-align: center;
+}
+#skills .fa {
+    margin-right: 6px;
+}
+
+#skills h3 {
+    text-align: center;
+    padding: 11px 15px 11px 15px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+#skills #languages {
+    margin-bottom: 40px;
+}
+
+#skills p.lang-description {
+    margin-bottom: 0;
+}

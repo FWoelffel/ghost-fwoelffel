@@ -18,32 +18,47 @@
     {{ghost_head}}
 </head>
 <body class="{{body_class}}">
-<div id="main-wrapper">
 {{#post}}
-
+    <div id="main-wrapper">
     {{> header cover=image}}
-
     {{> navbar}}
-
-<section id="whoami">
-    {{> about/whoami}}
-</section>
-
-<section id="resume">
-    {{> about/resume}}
-</section>
-
-<section id="skills">
-    {{> about/skills}}
-</section>
-
+        <div id="main-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+                        <section id="whoami">
+                            {{> about/whoami}}
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+                        <section id="resume">
+                            {{> about/resume}}
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+                        <section id="skills">
+                            {{> about/skills}}
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{> footer}}
+    </div>
 {{/post}}
 
-    {{> footer}}
 
-</div>
 {{! Scripts }}
+{{ghost_foot}}
+<script src="{{asset "js/modernizr.min.js"}}"></script>
 <script src="{{asset "js/jquery-2.1.4.min.js"}}"></script>
+<script src="{{asset "js/jquery.knob.min.js"}}"></script>
+<script src="{{asset "js/jquery.waypoints.min.js"}}"></script>
+<script src="{{asset "js/bootstrap.min.js"}}"></script>
 {{#if @blog.cover}}
     <script src="{{asset "js/backstretch.min.js"}}"></script>
     <script>
@@ -51,9 +66,7 @@
     </script>
 {{/if}}
 <script src="{{asset "js/header-animate.js"}}"></script>
-<script src="{{asset "js/bootstrap.min.js"}}"></script>
 <script src="{{asset "js/script.js"}}"></script>
 <script src="{{asset "js/about.js"}}"></script>
-{{ghost_foot}}
 </body>
 </html>
