@@ -15,18 +15,20 @@
             </div>
         </div>
     </nav>
-{{else}} {{! We assume we are on the index }}
-    <nav class="container" id="pagination">
-        <div class="row">
-            <nav class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center" role="navigation">
-                {{#if prev}}
-                        <a class="newer-posts" href="{{page_url prev}}"><i class="fa fa-arrow-circle-o-left"></i></a>
-                {{/if}}
-                    <span class="page-number">{{page}} / {{pages}}</span>
-                {{#if next}}
-                        <a class="older-posts" href="{{page_url next}}"><i class="fa fa-arrow-circle-o-right"></i></a>
-                {{/if}}
-            </nav>
-        </div>
-    </nav>
+{{else}}
+    {{^is "page"}}
+        <nav class="container" id="pagination">
+            <div class="row">
+                <nav class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center" role="navigation">
+                    {{#if prev}}
+                            <a class="newer-posts" href="{{page_url prev}}"><i class="fa fa-arrow-circle-o-left"></i></a>
+                    {{/if}}
+                        <span class="page-number">{{page}} / {{pages}}</span>
+                    {{#if next}}
+                            <a class="older-posts" href="{{page_url next}}"><i class="fa fa-arrow-circle-o-right"></i></a>
+                    {{/if}}
+                </nav>
+            </div>
+        </nav>
+    {{/is}}
 {{/is}}
