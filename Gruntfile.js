@@ -13,6 +13,9 @@ module.exports = function(grunt) {
             }
         },
         uglify: {
+            options: {
+                mangle: true
+            },
             main: {
                 files: {
                     'assets/js/main.min.js': 'src/js/*.js'
@@ -34,5 +37,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.registerTask('default',['watch']);
+    grunt.registerTask('default',['compass', 'uglify']);
+    grunt.registerTask('watch',['watch']);
 }
