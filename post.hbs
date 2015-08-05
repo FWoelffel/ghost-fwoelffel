@@ -8,8 +8,8 @@
         <div class="row">
             <article class="{{post_class}} col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
                 <header>
-                    <h1 class="title heading">{{title}}</h1>
-                    <time class="small" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM DD, YYYY"}}</time>
+                    <h1 class="title">{{title}}</h1>
+                    <time class="small" datetime="{{date format="YYYY-MM-DD"}}"><i class="fa fa-calendar-o"></i>{{date format="MMMM DD, YYYY"}}</time>
                 </header>
                 <section class="text-justify">
                     {{content}}
@@ -28,6 +28,9 @@
                 {{/if}}
             </article>
         </div>
+
+        {{> pagination}}
+
         <div class="row">
             <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
                 <div id="disqus_thread"></div>
@@ -47,7 +50,6 @@
             </div>
         </div>
     </div>
-    {{> pagination}}
 </div>
 {{> footer}}
 {{/post}}

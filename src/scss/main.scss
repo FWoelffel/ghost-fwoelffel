@@ -35,6 +35,10 @@
   @include animation(fade-in-down .6s .2s);
 }
 
+.h1 {
+  @extend h1
+}
+
 /*
  * 3 : Set up
  */
@@ -98,11 +102,23 @@ h4 {
 #main-header {
 
   width: 100%;
-  height: 400px;
+  height: 500px;
   color: white;
 
-  * {
-    z-index: 2;
+  &.ctx-index {
+    &.ctx-paged {
+      height: 220px;
+    }
+  }
+
+  &.ctx-post {
+    height: 100px;
+    &.ctx-featured {
+      height: 220px;
+    }
+    &.ctx-image {
+      height: 500px;
+    }
   }
 
   &>div {
@@ -115,13 +131,6 @@ h4 {
       -webkit-filter: brightness(80%);
     }
   }
-
-  #dotsandlines-canvas {
-    z-index: 0;
-    position: absolute;
-    top: 0;
-  }
-
 }
 
 /*
@@ -212,6 +221,12 @@ h4 {
 
   margin-top: 25px;
   margin-bottom: 25px;
+
+  #pagination {
+
+    padding: 0;
+
+  }
 
   @import "blog";
   @import "pagination";
