@@ -28,7 +28,7 @@ module.exports = function(grunt) {
                 files: 'src/scss/*.scss',
                 tasks: ['compass']
             },
-            js: {
+            scripts: {
                 files: 'src/js/*.js',
                 tasks: ['uglify']
             }
@@ -38,5 +38,4 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.registerTask('default',['compass', 'uglify']);
-    grunt.registerTask('watch',['watch']);
-}
+};
