@@ -21,7 +21,11 @@
 </div>
 {{! Scripts }}
 {{ghost_foot}}
+<script src="{{asset "js/modernizr.min.js"}}"></script>
 <script src="{{asset "js/jquery-2.1.4.min.js"}}"></script>
+<script src="{{asset "js/jquery.knob.min.js"}}"></script>
+<script src="{{asset "js/jquery.waypoints.min.js"}}"></script>
+<script src="{{asset "js/bootstrap.min.js"}}"></script>
 {{#if @blog.cover}}
     <script src="{{asset "js/backstretch.min.js"}}"></script>
     <script>
@@ -29,7 +33,6 @@
     </script>
 {{/if}}
 <script src="{{asset "js/header-animate.js"}}"></script>
-<script src="{{asset "js/bootstrap.min.js"}}"></script>
 <script src="{{asset "js/script.js"}}"></script>
 </body>
 </html>
