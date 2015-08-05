@@ -1,0 +1,219 @@
+&.about {
+
+  section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  /*
+   * Vertical timeline
+   */
+
+  .v-timeline {
+    padding: 0;
+    list-style: none;
+    position: relative;
+
+    /*
+     * The line
+     */
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #e0e0e0;
+      left: 20%;
+      margin-left: -6px;
+      @media screen and (max-width: 47.2em) {
+        display: none;
+      }
+    }
+
+
+    & > li {
+
+      /*
+       * The date/time
+       */
+      .v-time {
+        display: block;
+        width: 25%;
+        padding-right: 100px;
+        position: absolute;
+
+        @media screen and (max-width: 47.2em) {
+          width: 100%;
+          position: relative;
+          padding: 0 0 20px 10px;
+        }
+
+        span {
+          display: block;
+          text-align: right;
+          font-size: 16px;
+          color: #999;
+          @media screen and (max-width: 65.375em) {
+            font-size: 1.05em;
+          }
+          @media screen and (max-width: 47.2em) {
+            text-align: left;
+          }
+        }
+      }
+
+      /*
+       * Heading
+       */
+      & > .v-heading {
+        text-align: center;
+        margin-bottom: 50px;
+        margin-top: 75px;
+        position: relative;
+        padding: 11px 15px;
+
+        & [class*="fa-"] {
+          margin-right: 6px;
+        }
+      }
+
+      /*
+       * Right content
+       */
+      & .v-label {
+        margin: 0 0 15px 25%;
+        padding: 20px 30px;
+        font-weight: 300;
+        line-height: 1.4;
+        position: relative;
+        background: #f5f5f5;
+
+        @media screen and (max-width: 47.2em) {
+          margin: 0 0 30px 0;
+          padding: 1.3em;
+        }
+
+        & p {
+          font-size: 14px;
+          line-height: 24px;
+          margin-top: 10px;
+          margin-bottom: 0;
+        }
+        & h4 {
+          margin: 0;
+          font-size: 17px;
+        }
+
+        & h4 a {
+          text-decoration: none;
+        }
+
+        /*
+         * The triangle
+         */
+        &:after {
+          right: 100%;
+          border: solid transparent;
+          content: " ";
+          height: 0;
+          width: 0;
+          position: absolute;
+          pointer-events: none;
+          border-right-color: #f5f5f5;
+          border-width: 10px;
+          top: 10px;
+
+          @media screen and (max-width: 47.2em) {
+            right: auto;
+            left: 20px;
+            border-right-color: transparent;
+            border-bottom-color: #869198;
+            top: -20px;
+          }
+        }
+      }
+
+
+      /*
+       * The icons
+       */
+      & .v-icon {
+        width: 40px;
+        height: 26px;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        font-size: 13px;
+        line-height: 24px;
+        -webkit-font-smoothing: antialiased;
+        position: absolute;
+        color: #fff;
+        background: #666;
+        text-align: center;
+        left: 20%;
+        margin: 7px 0 0 -24px;
+        background-color: #869198;
+
+        @media screen and (max-width: 47.2em) {
+          display: none;
+        }
+
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          width: 0;
+          left: 0;
+          border-left: 20px solid transparent;
+          border-right: 20px solid transparent;
+        }
+        &:before {
+          bottom: 100%;
+          border-bottom: 10px solid #869198;
+        }
+        &:after {
+          top: 100%;
+          width: 0;
+          border-top: 10px solid #869198;
+        }
+      }
+    }
+  }
+
+  /*
+   * Skills
+   */
+
+  #skills {
+
+    .lang-container {
+      display: inline-block;
+      margin: 0 15px 0 15px;
+      text-align: center;
+    }
+
+    .fa {
+      margin-right: 6px;
+    }
+
+    h3 {
+      text-align: center;
+      padding: 11px 15px 11px 15px;
+      margin-top: 25px;
+      margin-bottom: 50px;
+    }
+
+    #languages {
+      margin-bottom: 40px;
+    }
+
+    p.lang-description {
+      margin-bottom: 0;
+    }
+
+  }
+
+}
