@@ -4,7 +4,11 @@ module.exports = function(grunt) {
         compass: {
             dist: {
                 options: {
-                    config: 'config/compass.rb'
+                    httpPath: '/',
+                    cssPath: 'assets/css',
+                    sassPath: 'src/scss',
+                    outputStyle: 'compressed',
+                    noLineComments: true
                 }
             }
         },
