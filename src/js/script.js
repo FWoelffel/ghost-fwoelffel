@@ -13,8 +13,6 @@ function checkSize() {
     return size;
 }
 
-// ---------------------------
-
 $(function() {
 
     $(window).resize(checkSize);
@@ -68,7 +66,6 @@ $(function() {
      */
     $(".dial").knob({
         draw : function () {
-            // "tron" case
             if(this.$.data('skin') == 'tron') {
 
                 var a = this.angle(this.cv)  		// Angle
