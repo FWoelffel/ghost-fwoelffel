@@ -192,10 +192,18 @@ h4 {
   #navbar-links {
     border: none !important;
     text-align: center;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      .navbar-nav {
+        margin: 0;
+      }
+    }
 
     li.current>a {
       color: #2780e3 !important;
     }
+
+
 
   }
 
