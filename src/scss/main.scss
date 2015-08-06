@@ -228,6 +228,15 @@ h4 {
 
   }
 
+  time {
+    color: #878787;
+    margin-left: 5px;
+
+    .fa.fa-calendar-o {
+      margin-right: 5px;
+    }
+  }
+
   @import "blog";
   @import "pagination";
   @import "post";
