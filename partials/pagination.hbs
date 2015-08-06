@@ -1,26 +1,36 @@
 {{#is "post"}}
 <nav class="row" id="pagination">
     <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2" role="navigation">
-        {{#next_post}}
-        <div class="col-xs-12 text-left">
-            <a href="{{url}}"><i class="fa fa-arrow-circle-o-left"></i> {{title}}</a>
+        <div class="col-xs-6 text-left">
+            {{#next_post}}
+            <a href="{{url}}"><i class="fa fa-arrow-circle-o-left"></i><span class="hidden-xs ml5">Suivant</span></a>
+            {{/next_post}}
         </div>
-        {{/next_post}}
-        {{#prev_post}}
-        <div class="col-xs-12 text-right">
-            <a href="{{url}}">{{title}} <i class="fa fa-arrow-circle-o-right"></i></a>
+        <div class="col-xs-6 text-right">
+            {{#prev_post}}
+            <a href="{{url}}"><span class="hidden-xs mr5">Précédent</span><i class="fa fa-arrow-circle-o-right"></i></a>
+            {{/prev_post}}
         </div>
-        {{/prev_post}}
     </div>
 </nav>
 {{/is}}
 
 {{#is "index, tag, author, paged"}}
     <nav class="row" id="pagination">
-        <nav class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center" role="navigation">
-            {{#if prev}}<a class="newer-posts" href="{{page_url prev}}"><i class="fa fa-arrow-circle-o-left"></i></a>{{/if}}
-            <span class="page-number">{{page}} / {{pages}}</span>
-            {{#if next}}<a class="older-posts" href="{{page_url next}}"><i class="fa fa-arrow-circle-o-right"></i></a>{{/if}}
-        </nav>
+       <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2" role="navigation">
+            <div class="col-xs-4 text-left">
+                {{#if prev}}
+                    <a href="{{page_url prev}}"><i class="fa fa-arrow-circle-o-left"></i><span class="hidden-xs ml5">Suivant</span></a>
+                {{/if}}
+            </div>
+            <div class="col-xs-4 text-center">
+                <span>{{page}} / {{pages}}</span>
+            </div>
+            <div class="col-xs-4 text-right">
+                {{#if next}}
+                    <a href="{{page_url next}}"><span class="hidden-xs mr5">Précédent</span><i class="fa fa-arrow-circle-o-right"></i></a>
+                {{/if}}
+            </div>
+        </div>
     </nav>
 {{/is}}
