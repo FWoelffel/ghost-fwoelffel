@@ -134,5 +134,9 @@ $(function() {
         });
     }
 
+    /*
+     * Backstretch
+     */
+    $("body").backstretch($("#main-wrapper").data("cover"));
 
 });
