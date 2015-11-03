@@ -74,4 +74,21 @@ input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
 button::-moz-focus-inner,
 input::-moz-focus-inner { border: 0; padding: 0; }
 textarea { overflow: auto; vertical-align: top; }
-table { border-collapse: collapse; border-spacing: 0; }
+table {
+  border-collapse: separate;
+  -webkit-border-horizontal-spacing: 2px;
+  -webkit-border-vertical-spacing: 2px;
+  width: auto;
+  overflow: auto;
+  display: block;
+  th {
+    background-color: #cdcace;
+    color: white;
+    padding: 20px 30px;
+    text-align: center;
+  }
+  td {
+    background-color: #fafafa;
+    padding: 20px 30px;
+  }
+}
